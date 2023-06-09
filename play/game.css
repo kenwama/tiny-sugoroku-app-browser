@@ -1,0 +1,237 @@
+:root {
+  --main-width: 1000px;
+  --main-margin: 40px;
+  --panel-size: 130px;
+  --panel-margin: 20px;
+  --panel-border-radius: 20px;
+  --user-card-border-radius: 10px;
+}
+
+body {
+  background: var(--background-color);
+  width: var(--main-width);
+}
+
+.start-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 3px solid pink;
+  padding: 20px 40px;
+  margin: 100px 120px;
+}
+
+.start-modal-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.start-modal-list {
+  margin-bottom: 10px;
+}
+
+.start-modal-button {
+  padding: 6px 20px;
+}
+
+.container {
+  width: var(--main-width);
+  margin: var(--main-margin);
+}
+
+.stage {
+  width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stage-title {
+  margin-bottom: 30px;
+}
+
+.panel {
+  border: 6px solid var(--panel-border-color);
+  border-radius: var(--panel-border-radius);
+  width: var(--panel-size);
+  height: var(--panel-size);
+  padding: 10px;
+  margin-right: var(--panel-margin);
+  margin-bottom: var(--panel-margin);
+
+  background: var(--panel-background-color);
+}
+
+.panel.start {
+  background: #ffc0cb;
+  border-color: #ff367f;
+}
+
+.panel.goal {
+  background: #ff9872;
+  border-color: #ff5f17;
+}
+
+.panel-header {
+  border-bottom: 3px dashed var(--panel-border-color);
+  display: flex;
+  align-items: center;
+}
+
+.panel-header.start {
+  color: #ff367f;
+  border-color: #ff367f;
+}
+
+.panel-header.goal {
+  color: #ff5f17;
+  border-color: #ff5f17;
+}
+
+.panel-message {
+  font-size: 22px;
+}
+
+.panel-event-lavel {
+  font-size: 13px;
+  background: red;
+  padding: 4px 8px;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+.foward {
+  background: #5bff7f;
+}
+
+.back {
+  background: #75a9ff;
+}
+
+.lose-turn {
+  background: var(--lose-turn-level-color);
+}
+
+.swap {
+  background: #a16eff;
+}
+
+.panel-number {
+  font-size: 25px;
+}
+
+.user-icon {
+  font-size: 30px;
+  display: inline-block;
+  margin-left: 12px;
+
+  transition: opacity 1.2s;
+}
+
+/* スワップ用のクラス */
+.user-icon.swaped {
+  opacity: 0;
+}
+
+.user-icon.appear {
+  opacity: 1;
+}
+
+.user-icon.disappear {
+  opacity: 0;
+}
+
+.stage-info-container {
+  background: #ff8856;
+  border-radius: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.user-indicater {
+  display: flex;
+}
+
+.user-card {
+  background: white;
+  width: 60px;
+  border: 1px solid;
+  border-radius: var(--user-card-border-radius);
+  margin-right: 10px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-card-icon {
+  font-size: 26px;
+}
+
+.user-lose-turn {
+  height: 26px;
+  border-radius: var(--user-card-border-radius);
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-button {
+  font-size: 60px;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+}
+
+.dice-button:hover {
+  background: #77f9c3;
+}
+
+.dice-anime {
+  width: 300px;
+  height: 200px;
+  background: red;
+  position: fixed;
+  bottom: 0;
+  transition: background 1s;
+}
+
+.dice-anime.did {
+  background: blue;
+}
+
+.overlay {
+  font-size: 36px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 90px;
+  border: 6px solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.overlay.appear {
+  opacity: 1;
+}
+
+.event-message {
+  background: #b1f9d0;
+}
